@@ -1,0 +1,22 @@
+.layout-sidebar {
+    width: 7rem;
+    overflow: visible;
+    z-index: 999;
+}
+
+li {
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    position: relative;
+    border-radius: 14px;
+}
+
+li:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+li.active {
+    background-color: white;
+}

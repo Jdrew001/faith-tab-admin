@@ -4,35 +4,43 @@ export class AppConstant {
     public static LEFT_MENU: Array<LeftNavModel> = [
         {
             label: 'Dashboard',
-            icon: 'p-home'
+            icon: 'pi-home',
+            url: '/dashboard'
         },
         {
             label: 'Groups',
-            icon: 'pi-users'
+            icon: 'pi-users',
+            url: '/groups'
         },
         {
             label: 'Giving',
-            icon: 'pi-money-bill'
+            icon: 'pi-money-bill',
+            url: '/giving'
         },
         {
             label: 'Interactions',
-            icon: 'pi-comments'
+            icon: 'pi-comments',
+            url: '/interactions'
         },
         {
             label: 'Attendance',
-            icon: 'pi-history'
+            icon: 'pi-history',
+            url: '/attendance'
         },
         {
             label: 'Reports',
-            icon: 'pi-chart-line'
+            icon: 'pi-chart-line',
+            url: '/reports'
         },
         {
             label: 'Schedule',
-            icon: 'pi-calendar'
+            icon: 'pi-calendar',
+            url: '/schedule'
         },
         {
             label: 'Logout',
-            icon: 'pi-power-off'
+            icon: 'pi-power-off',
+            url: '/login'
         }
     ]
 }

@@ -1,6 +1,12 @@
-<ng-container * ngIf="isLogin">
-    <app-top-navigation></app-top-navigation>
-    <app-left-navigation
-        [leftMenuConfig]="leftMenuConfig"></app-left-navigation>
-</ng-container>
-<router-outlet></router-outlet>
+<div class="layout-wrapper">
+    <ng-container *ngIf="!isLogin">
+        <app-top-navigation></app-top-navigation>
+        <app-left-navigation
+            [leftMenuConfig]="leftMenuConfig"></app-left-navigation>
+    </ng-container>
+    <div class="layout-content-wrapper">
+        <div class="layout-content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

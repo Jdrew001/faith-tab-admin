@@ -1,8 +1,9 @@
 <div class="layout-sidebar">
     <div class="layout-menu-container">
         <ul class="layout-menu">
-            <li app-menuitem *ngFor="let item of leftMenuConfig; let i = index;" (click)="onMenuClick(item)">
-
+            <li *ngFor="let item of leftMenuConfig; let i = index;" [routerLink]="[item.url]" routerLinkActive="active"
+                (click)="onMenuClick(item)">
+                <i class="pi" [ngClass]="item.icon" style="font-size: 2rem"></i>
             </li>
         </ul>
     </div>
