@@ -8,6 +8,11 @@ export class AppConstant {
             url: '/dashboard'
         },
         {
+            label: 'Individuals',
+            icon: 'pi-user',
+            url: '/individuals'
+        },
+        {
             label: 'Groups',
             icon: 'pi-users',
             url: '/groups'

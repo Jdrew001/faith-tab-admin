@@ -1,7 +1,10 @@
 <div class="layout-sidebar">
     <div class="layout-menu-container">
         <ul class="layout-menu">
-            <li *ngFor="let item of leftMenuConfig; let i = index;" [routerLink]="[item.url]" routerLinkActive="active"
+            <li *ngFor="let item of leftMenuConfig; let i = index;"
+                [routerLink]="[item.url]"
+                routerLinkActive="active"
+                [pTooltip]="item.label" tooltipPosition="right"
                 (click)="onMenuClick(item)">
                 <i class="pi" [ngClass]="item.icon" style="font-size: 2rem"></i>
             </li>

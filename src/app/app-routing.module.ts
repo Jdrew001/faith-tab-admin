@@ -13,6 +13,11 @@ const routes: Routes = [
     canActivate: []
   },
   {
+    path: 'individuals',
+    loadChildren: () => import('./individuals/individuals.module').then(m => m.IndividualsModule),
+    canActivate: []
+  },
+  {
     path: 'groups',
     loadChildren: () => import('./groups/groups.module').then(m => m.GroupsModule),
     canActivate: []

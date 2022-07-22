@@ -1,0 +1,33 @@
+<p-table [value]="individuals">
+    <ng-template pTemplate="caption">
+        <div class="grid">
+            <div class="col-10 align-self-center">
+                <p>Individuals</p>
+            </div>
+            <div class="col-2 align-self-center">
+                <button pButton type="button" label="Add" icon="pi pi-plus" class="p-button-sm"></button>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-member>
+        <tr>
+            <td>{{member.firstName}}</td>
+            <td>{{member.lastName}}</td>
+            <td>{{member.phone}}</td>
+            <td>{{member.email}}</td>
+            <td>
+                <i class="pi pi-ellipsis-v"
+                [pTooltip]="'Edit'" tooltipPosition="left"></i>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
