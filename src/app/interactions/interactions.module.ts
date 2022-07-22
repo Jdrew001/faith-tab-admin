@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InteractionsComponent } from './interactions.component';
+import { InteractionsRoutingModule } from './interactions-routing.module';
 
 
 
@@ -9,7 +10,8 @@ import { InteractionsComponent } from './interactions.component';
     InteractionsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    InteractionsRoutingModule
   ]
 })
 export class InteractionsModule { }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { LeftNavModel } from './model/left-nav.model';
 
 @Component({
   selector: 'app-left-navigation',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftNavigationComponent implements OnInit {
 
+  @Input() leftMenuConfig: Array<LeftNavModel> = [];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onMenuClick(menuItem: LeftNavModel) {
+
   }
 
 }

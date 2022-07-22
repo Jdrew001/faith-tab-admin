@@ -42,7 +42,7 @@ const routes: Routes = [
     loadChildren: () => import('./attendance/attendance.module').then(m => m.AttendanceModule),
     canActivate: []
   },
-  { path: '/', redirectTo: '/dashboard', pathMatch: 'full' }
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({

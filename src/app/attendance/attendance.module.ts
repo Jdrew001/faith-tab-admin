@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AttendanceComponent } from './attendance.component';
+import { AttendanceRoutingModule } from './attendance-routing.module';
 
 
 
@@ -9,7 +10,8 @@ import { AttendanceComponent } from './attendance.component';
     AttendanceComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AttendanceRoutingModule
   ]
 })
 export class AttendanceModule { }
