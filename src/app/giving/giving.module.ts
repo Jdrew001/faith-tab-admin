@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GivingComponent } from './giving.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    GivingComponent
+  ],
   imports: [
     CommonModule
   ]
