@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   get isLogin(): boolean { return this.route.url.includes('login') ?? false; }
 
   constructor(
-    private route: Router
+    public route: Router
   ) {
 
   }

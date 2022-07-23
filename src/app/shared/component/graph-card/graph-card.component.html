@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-header h-1rem">
+        <div class="grid p-3 line-graph-opt">
+            <div class="col-2">
+                <i class="pi" [ngClass]="config.icon" [ngStyle]="{'color': config.color}" style="font-size: 2.5rem"></i>
+            </div>
+            <div class="col-10">
+                <div class="grid">
+                    <div class="col-12 pb-0" [ngStyle]="{'color': config.color}" style="font-size: 1.2rem">
+                        {{ config.label }}
+                    </div>
+                    <div class="col-12 pt-0" [ngStyle]="{'color': config.color}" style="font-size: 1.2rem">
+                        {{ config.value }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p-chart type="line" [data]="basicData" [options]="basicOptions"></p-chart>
+</div>

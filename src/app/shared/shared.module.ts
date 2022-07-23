@@ -4,22 +4,25 @@ import { TopNavigationComponent } from './component/top-navigation/top-navigatio
 import { LeftNavigationComponent } from './component/left-navigation/left-navigation.component';
 import { RouterModule } from '@angular/router';
 import {TooltipModule} from 'primeng/tooltip';
-
-
+import { GraphCardComponent } from './component/graph-card/graph-card.component';
+import {ChartModule} from 'primeng/chart';
 
 @NgModule({
   declarations: [
     TopNavigationComponent,
-    LeftNavigationComponent
+    LeftNavigationComponent,
+    GraphCardComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    TooltipModule
+    TooltipModule,
+    ChartModule
   ],
   exports: [
     TopNavigationComponent,
-    LeftNavigationComponent
+    LeftNavigationComponent,
+    GraphCardComponent
   ]
 })
 export class SharedModule { }
