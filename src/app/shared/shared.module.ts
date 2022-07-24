@@ -12,6 +12,7 @@ import { UpcomingTaskComponent } from './component/upcoming-task/upcoming-task.c
 import { ButtonModule } from 'primeng/button';
 import { InboxComponent } from './component/inbox/inbox.component';
 import { PanelModule } from 'primeng/panel';
+import { ChipModule } from 'primeng/chip';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PanelModule } from 'primeng/panel';
     ChartModule,
     TimelineModule,
     ButtonModule,
-    PanelModule
+    PanelModule,
+    ChipModule
   ],
   exports: [
     TopNavigationComponent,
