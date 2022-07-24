@@ -26,6 +26,12 @@ export class DashboardComponent implements OnInit {
       label: 'First Time Guests',
       value: '120',
       color: '#1B92D4'
+    },
+    {
+      icon: 'pi-users',
+      label: 'First Time Guests',
+      value: '120',
+      color: '#1B92D4'
     }
   ];
 

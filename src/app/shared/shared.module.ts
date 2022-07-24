@@ -5,24 +5,39 @@ import { LeftNavigationComponent } from './component/left-navigation/left-naviga
 import { RouterModule } from '@angular/router';
 import {TooltipModule} from 'primeng/tooltip';
 import { GraphCardComponent } from './component/graph-card/graph-card.component';
-import {ChartModule} from 'primeng/chart';
+import { ChartModule } from 'primeng/chart';
+import { HistoryComponent } from './component/history/history.component';
+import { TimelineModule } from 'primeng/timeline';
+import { UpcomingTaskComponent } from './component/upcoming-task/upcoming-task.component';
+import { ButtonModule } from 'primeng/button';
+import { InboxComponent } from './component/inbox/inbox.component';
+import { PanelModule } from 'primeng/panel';
 
 @NgModule({
   declarations: [
     TopNavigationComponent,
     LeftNavigationComponent,
-    GraphCardComponent
+    GraphCardComponent,
+    HistoryComponent,
+    UpcomingTaskComponent,
+    InboxComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     TooltipModule,
-    ChartModule
+    ChartModule,
+    TimelineModule,
+    ButtonModule,
+    PanelModule
   ],
   exports: [
     TopNavigationComponent,
     LeftNavigationComponent,
-    GraphCardComponent
+    GraphCardComponent,
+    HistoryComponent,
+    UpcomingTaskComponent,
+    InboxComponent
   ]
 })
 export class SharedModule { }
