@@ -10,24 +10,6 @@ export class GraphCardComponent implements OnInit {
 
   @Input() config: GraphCardConfig = new GraphCardConfig();
 
-  basicData = {
-    labels: ['', '', '', '', '', '', ''],
-    datasets: [
-        {
-            label: 'First Dataset',
-            data: [65, 59, 80, 81, 56, 100, 150],
-            fill: true,
-            borderColor: '#42A5F5',
-            orderRadius: 15,
-            tension: .4,
-            backgroundColor: '#42A5F5',
-            gridLines: {
-              display: false
-           }
-        }
-    ]
-  };
-
   basicOptions = {
     responsive: true,
     maintainAspectRatio: false,

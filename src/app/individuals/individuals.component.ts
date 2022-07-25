@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndividualsComponent implements OnInit {
 
+  display: boolean = false;
+
   individuals = [
     {
       firstName: 'Drew',
@@ -79,6 +81,10 @@ export class IndividualsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addNewUser() {
+    this.display = true;
   }
 
 }

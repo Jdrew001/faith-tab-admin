@@ -3,4 +3,8 @@ export class GraphCardConfig {
     label: string = '';
     value: string = '';
     color: string = '';
+    graphData: any = {
+        labels: [],
+        dataSets: []
+    };
 }

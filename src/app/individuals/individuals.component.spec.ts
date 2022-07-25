@@ -20,4 +20,11 @@ describe('IndividualsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should call add new user', () => {
+    spyOn(component, 'addNewUser').and.callThrough();
+    component.addNewUser();
+    expect(component.addNewUser).toHaveBeenCalled();
+    expect(component.display).toBe(true);
+  })
 });

@@ -1,10 +1,14 @@
-.card {
+:host ::ng-deep .p-card {
     padding: 0px !important;
     margin-bottom: 10px !important;
     overflow: hidden;
+    border-radius: 14px;
 }
 
-.line-graph-opt {
-    position: absolute;
-    top: 3%;
+:host ::ng-deep .p-card-body {
+    padding: unset !important;
+}
+
+:host ::ng-deep .p-card-content {
+    padding: unset !important;
 }

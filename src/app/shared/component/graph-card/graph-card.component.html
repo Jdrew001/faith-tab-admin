@@ -1,7 +1,7 @@
-<div class="card">
-    <div class="card-header h-1rem">
+<p-card>
+    <ng-template pTemplate="header">
         <div class="grid p-3 line-graph-opt">
-            <div class="col-2">
+            <div class="col-1">
                 <i class="pi" [ngClass]="config.icon" [ngStyle]="{'color': config.color}" style="font-size: 2.5rem"></i>
             </div>
             <div class="col-10">
@@ -15,6 +15,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <p-chart type="line" [data]="basicData" [options]="basicOptions"></p-chart>
-</div>
+    </ng-template>
+    <p-chart type="line" [data]="config.graphData" [options]="basicOptions"></p-chart>
+</p-card>

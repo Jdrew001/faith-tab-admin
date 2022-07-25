@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { IndividualsRoutingModule } from './individuals-routing.module';
 import { IndividualsComponent } from './individuals.component';
-import {TableModule} from 'primeng/table';
+import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
+import { DialogModule } from 'primeng/dialog';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { TooltipModule } from 'primeng/tooltip';
     IndividualsRoutingModule,
     TableModule,
     ButtonModule,
-    TooltipModule
+    TooltipModule,
+    DialogModule
   ]
 })
 export class IndividualsModule { }
