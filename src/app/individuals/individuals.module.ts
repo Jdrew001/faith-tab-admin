@@ -6,12 +6,20 @@ import { IndividualsComponent } from './individuals.component';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
+import { AccordionModule } from 'primeng/accordion';
 import { DialogModule } from 'primeng/dialog';
+import { DetailsComponent } from './details/details.component';
+import { CreateComponent } from './create/create.component';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 @NgModule({
   declarations: [
-    IndividualsComponent
+    IndividualsComponent,
+    DetailsComponent,
+    CreateComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +27,10 @@ import { DialogModule } from 'primeng/dialog';
     TableModule,
     ButtonModule,
     TooltipModule,
-    DialogModule
+    DialogModule,
+    AccordionModule,
+    RadioButtonModule,
+    InputTextModule
   ]
 })
 export class IndividualsModule { }

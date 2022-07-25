@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./individuals.component.scss']
 })
 export class IndividualsComponent implements OnInit {
-
-  display: boolean = false;
+  
+  formType: 'ADD' | 'DETAILS' | '' = '';
 
   individuals = [
     {
@@ -84,7 +84,7 @@ export class IndividualsComponent implements OnInit {
   }
 
   addNewUser() {
-    this.display = true;
+    this.formType = 'ADD';
   }
 
 }
