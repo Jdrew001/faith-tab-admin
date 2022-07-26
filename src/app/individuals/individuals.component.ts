@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndividualsComponent implements OnInit {
   
-  formType: 'ADD' | 'DETAILS' | '' = '';
+  formType: 'ADD' | 'DETAILS' | null = null;
 
   individuals = [
     {
@@ -85,6 +85,10 @@ export class IndividualsComponent implements OnInit {
 
   addNewUser() {
     this.formType = 'ADD';
+  }
+
+  discardCreate() {
+    this.formType = null;
   }
 
 }

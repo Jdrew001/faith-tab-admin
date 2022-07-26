@@ -8,7 +8,7 @@
                 </span>
             </div> -->
         </div>
-        <div class="grid">
+        <div class="grid mt-3">
             <div class="col-6">
                 <div class="field">
                     <span class="p-float-label">
@@ -44,23 +44,111 @@
         </div>
 
         <div class="grid">
-            <div class="col">
+            <div class="col-12">
                 Gender
-                <!-- <p-radioButton name="groupname" value="val1"></p-radioButton>
-                <p-radioButton name="groupname" value="val1"></p-radioButton> -->
+            </div>
+            <div class="col">
+                <p-radioButton name="groupname" value="MALE" label="Male" [(ngModel)]="selectedValue"></p-radioButton>
+            </div>
+            <div class="col">
+                <p-radioButton name="groupname" value="FEMALE" label="Female" [(ngModel)]="selectedValue"></p-radioButton>
             </div>
         </div>
     </p-accordionTab>
     <p-accordionTab header="Contact Info" [selected]="true">
-        Content 2
+        <div class="grid mt-3">
+            <div class="col-4">
+                <div class="field">
+                    <span class="p-float-label">
+                        <input id="float-input" type="text" pInputText> 
+                        <label for="float-input">Home Phone</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="field">
+                    <span class="p-float-label">
+                        <input id="float-input" type="text" pInputText> 
+                        <label for="float-input">Email</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="field">
+                    <span class="p-float-label">
+                        <input id="float-input" type="text" pInputText> 
+                        <label for="float-input">Cell Phone</label>
+                    </span>
+                </div>
+            </div>
+        </div>
     </p-accordionTab>
     <p-accordionTab header="Address" [selected]="true">
-        Content 3    
+        <div class="grid mt-3">
+            <div class="col-4">
+                <div class="field">
+                    <span class="p-float-label">
+                        <p-dropdown [options]="addressTypes" [(ngModel)]="addressType" optionLabel="name"></p-dropdown>
+                        <label for="float-input">Address Type</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="field">
+                    <span class="p-float-label">
+                        <input id="float-input" type="text" pInputText> 
+                        <label for="float-input">Email</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="field">
+                    <span class="p-float-label">
+                        <input id="float-input" type="text" pInputText> 
+                        <label for="float-input">Cell Phone</label>
+                    </span>
+                </div>
+            </div>
+        </div>  
     </p-accordionTab>
     <p-accordionTab header="Important Dates" [selected]="true">
-        Content 3    
+        <div class="grid mt-3"> 
+            <div class="col">
+                <div class="field">
+                    <span class="p-float-label">
+                        <p-calendar [(ngModel)]="value"></p-calendar>
+                        <label for="float-input">Birthday</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="field">
+                    <span class="p-float-label">
+                        <p-calendar [(ngModel)]="value"></p-calendar>
+                        <label for="float-input">Baptized</label>
+                    </span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="field">
+                    <span class="p-float-label">
+                        <p-calendar [(ngModel)]="value"></p-calendar>
+                        <label for="float-input">Received the Holy Ghost</label>
+                    </span>
+                </div>
+            </div>
+        </div>   
     </p-accordionTab>
     <p-accordionTab header="Notes" [selected]="true">
-        Content 3    
+        <div class="grid mt-3">
+            <div class="col">
+                <div class="field">
+                    <span class="p-float-label">
+                        <textarea pInputTextarea [(ngModel)]="property"></textarea>
+                        <label for="float-input">Personal</label>
+                    </span>
+                </div>
+            </div>
+        </div>  
     </p-accordionTab>
 </p-accordion>

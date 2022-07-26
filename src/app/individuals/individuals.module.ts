@@ -13,6 +13,10 @@ import { CreateComponent } from './create/create.component';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextModule } from 'primeng/inputtext';
+import { FormsModule } from '@angular/forms';
+import { DropdownModule } from 'primeng/dropdown';
+import { CalendarModule } from 'primeng/calendar';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 
 @NgModule({
@@ -23,6 +27,7 @@ import { InputTextModule } from 'primeng/inputtext';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     IndividualsRoutingModule,
     TableModule,
     ButtonModule,
@@ -30,7 +35,10 @@ import { InputTextModule } from 'primeng/inputtext';
     DialogModule,
     AccordionModule,
     RadioButtonModule,
-    InputTextModule
+    InputTextModule,
+    DropdownModule,
+    CalendarModule,
+    InputTextareaModule
   ]
 })
 export class IndividualsModule { }

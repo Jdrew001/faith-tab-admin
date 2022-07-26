@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
+  selectedValue = null;
+  addressType = null;
+  addressTypes = [
+    {name: 'Residental', value: 'RESIDENTIAL'},
+    {name: 'Mailing', value: 'MAILING'},
+    {name: 'Mailing & Residental', value: 'MAILING_RESIDENTAL'}
+  ];
+  value: any = null;
+  property: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
