@@ -11,12 +11,14 @@ import { DialogModule } from 'primeng/dialog';
 import { DetailsComponent } from './details/details.component';
 import { CreateComponent } from './create/create.component';
 import { RadioButtonModule } from 'primeng/radiobutton';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
 import { CalendarModule } from 'primeng/calendar';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { TabViewModule } from 'primeng/tabview';
+import { AvatarModule } from 'primeng/avatar';
+import { CardModule } from 'primeng/card';
 
 
 @NgModule({
@@ -38,7 +40,10 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     InputTextModule,
     DropdownModule,
     CalendarModule,
-    InputTextareaModule
+    InputTextareaModule,
+    TabViewModule,
+    AvatarModule,
+    CardModule
   ]
 })
 export class IndividualsModule { }
