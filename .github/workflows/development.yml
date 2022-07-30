@@ -1,0 +1,54 @@
+name: Closer App Development Pipeline
+
+on:
+  push:
+    branches: [ develop ]
+
+jobs:
+
+#### Run the android build and ios build concurrently ####
+#ANDROID BUILD
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+
+      - name: Install app dependencies
+        run: npm install
+
+      - name: Build Files
+        run: npm run build
+
+      - name: Upload dev APK
+        uses: actions/upload-artifact@v1
+        with:
+          name: app-dev
+          path: dist/faith-tab-admin/*
+
+#Deploy both Android and Ios if previous steps are successful
+  # deploy:
+  #   name: Deploy Android App - Firebase
+  #   needs: [build-android, build-ios]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Download Artifact
+  #       uses: actions/download-artifact@v2
+  #       with: 
+  #         name: app-dev
+  #         path: project/apk
+
+  #     - name: upload artifact to Firebase
+  #       uses: wzieba/Firebase-Distribution-Github-Action@v1
+  #       with:
+  #         appId: ${{secrets.FIREBASE_ANDROID_ID}}
+  #         token: ${{secrets.FIREBASE_TOKEN}}
+  #         groups: developers-android
+  #         file: project/apk/app-debug.apk
+  #         debug: false #this will show the verbose log
