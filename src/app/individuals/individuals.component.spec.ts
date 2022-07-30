@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TableModule } from 'primeng/table';
+import { TooltipModule } from 'primeng/tooltip';
 
 import { IndividualsComponent } from './individuals.component';
 
@@ -8,7 +10,11 @@ describe('IndividualsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IndividualsComponent ]
+      declarations: [ IndividualsComponent ],
+      imports: [
+        TableModule,
+        TooltipModule
+      ]
     })
     .compileComponents();
 
@@ -20,4 +26,11 @@ describe('IndividualsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should call add new user', () => {
+    spyOn(component, 'addNewUser').and.callThrough();
+    component.addNewUser();
+    expect(component.addNewUser).toHaveBeenCalled();
+    expect(component.formType).toBe('ADD');
+  })
 });

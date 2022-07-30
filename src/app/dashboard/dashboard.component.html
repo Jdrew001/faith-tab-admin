@@ -1,43 +1,32 @@
 <div>
+    <!-- <div class="grid surface-section px-4 py-5 md:px-6 lg:px-8 mb-5">
+        <div class="flex flex-column md:align-items-center md:justify-content-between md:flex-row">
+            <div class="font-medium text-3xl text-900">
+                Welcome Drew
+            </div>
+        </div>
+    </div> -->
+
     <div class="grid justify-content-center">
-        <div class="card-container col">
-            <div class="card m-2">
-                <div class="card-header">
-                    <h5>Card</h5>
-                </div>
-        
-                <p class="card-subtitle">Subtitle</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.</p>
-            </div>
+        <div *ngFor="let config of graphCards" class="card-container col">
+            <app-graph-card
+                [config]="config"></app-graph-card>
         </div>
-        <div class="card-container col">
-            <div class="card  m-2">
-                <div class="card-header">
-                    <h5>Card</h5>
-                </div>
-        
-                <p class="card-subtitle">Subtitle</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.</p>
-            </div>
+    </div>
+
+    <div class="grid">
+        <div class="col-6">
+            <app-history></app-history>
         </div>
-        <div class="card-container col">
-            <div class="card  m-2">
-                <div class="card-header">
-                    <h5>Card</h5>
-                </div>
-        
-                <p class="card-subtitle">Subtitle</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.</p>
-            </div>
+
+        <div class="col-6">
+            <app-upcoming-task></app-upcoming-task>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="col">
+            <app-inbox></app-inbox>
         </div>
     </div>
     
