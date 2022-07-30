@@ -67,7 +67,11 @@ export class DetailsComponent implements OnInit {
       relationship: 'Son'
     }
   ];
-  timelineSections: any;
+  givingData = [
+    { date: '07/30/2022', category: 'General', source: 'Input', details: 'Some notes bla bla bla', amount: '$200.00'},
+    { date: '07/30/2022', category: 'General', source: 'Input', details: 'Some notes bla bla bla', amount: '$200.00'},
+    { date: '07/30/2022', category: 'General', source: 'Input', details: 'Some notes bla bla bla', amount: '$200.00'}
+  ];
 
   constructor() { }
 
