@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class IndividualsComponent implements OnInit {
   
   formType: 'ADD' | 'DETAILS' | 'LIST' = 'DETAILS';
-
   individuals = [
     {
       id: '123',

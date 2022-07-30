@@ -19,6 +19,9 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { TabViewModule } from 'primeng/tabview';
 import { AvatarModule } from 'primeng/avatar';
 import { CardModule } from 'primeng/card';
+import { TimelineModule } from 'primeng/timeline';
+import { DividerModule } from 'primeng/divider';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -29,6 +32,7 @@ import { CardModule } from 'primeng/card';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     FormsModule,
     IndividualsRoutingModule,
     TableModule,
@@ -43,7 +47,9 @@ import { CardModule } from 'primeng/card';
     InputTextareaModule,
     TabViewModule,
     AvatarModule,
-    CardModule
+    CardModule,
+    TimelineModule,
+    DividerModule
   ]
 })
 export class IndividualsModule { }

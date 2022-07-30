@@ -1,6 +1,7 @@
 <div class="grid">
     <div class="col-12">
       <p-tabView>
+        <!-- Profile Tab -->
         <p-tabPanel header="Profile">
           <div class="grid">
             <div class="col-4">
@@ -230,6 +231,8 @@
             </div>
           </div>
         </p-tabPanel>
+
+        <!-- Family Tab -->
         <p-tabPanel header="Family">
           <div class="grid">
             <div class="col-12">
@@ -280,8 +283,37 @@
             </div>
           </div>
         </p-tabPanel>
+
+        <!-- Timeline Tab -->
         <p-tabPanel header="Timeline">
-          Timeline
+          <div class="grid">
+            <div class="col-12">
+              <p-card>
+                <h4>Timeline</h4>
+                <div class="grid">
+                  <div *ngFor="let section of timelineData?.sections" class="col-12">
+                    <p-divider align="center" class="m-1">
+                      <div class="inline-flex align-items-center">
+                          <small class="accent-color">{{ section?.sectionName }}</small>
+                      </div>
+                    </p-divider>
+                    <p-timeline [value]="timelineData?.events | timelineDivider: section?.sectionId">
+                      <ng-template pTemplate="content" let-event>
+                          <small class="p-text-secondary">
+                            {{event.action}}
+                          </small>
+                          <p>{{ event.detail }}</p>
+                      </ng-template>
+                      <ng-template pTemplate="opposite" let-event>
+                        <p class="mb-0">{{ event.date }}</p>
+                        <p>{{ event.day }}</p>
+                      </ng-template>
+                    </p-timeline>
+                  </div>
+                </div>
+              </p-card>
+            </div>
+          </div>
         </p-tabPanel>
         <p-tabPanel header="Giving">
           Giving

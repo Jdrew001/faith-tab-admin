@@ -14,6 +14,7 @@ import { InboxComponent } from './component/inbox/inbox.component';
 import { PanelModule } from 'primeng/panel';
 import { ChipModule } from 'primeng/chip';
 import { CardModule } from 'primeng/card';
+import { TimelineDividerPipe } from './pipes/timeline-divider.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CardModule } from 'primeng/card';
     GraphCardComponent,
     HistoryComponent,
     UpcomingTaskComponent,
-    InboxComponent
+    InboxComponent,
+    TimelineDividerPipe
   ],
   imports: [
     CommonModule,
@@ -41,7 +43,8 @@ import { CardModule } from 'primeng/card';
     GraphCardComponent,
     HistoryComponent,
     UpcomingTaskComponent,
-    InboxComponent
+    InboxComponent,
+    TimelineDividerPipe
   ]
 })
 export class SharedModule { }
