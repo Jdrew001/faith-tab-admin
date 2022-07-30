@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: app-dev
-          path: ${{ github.workspace }}/dist/faith-tab-admin/*
+          path: ~/dist/faith-tab-admin/*
 
 #Deploy both Android and Ios if previous steps are successful
   # deploy:
