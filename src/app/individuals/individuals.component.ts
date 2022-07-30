@@ -99,7 +99,21 @@ export class IndividualsComponent implements OnInit {
       assignTo: "Jon Harris",
       date: '02/23/2022'
     }
-  ]
+  ];
+  documents = [
+    {
+      documentName: 'Some Document',
+      uploadedBy: 'Jonathon Harris'
+    },
+    {
+      documentName: 'Some Document',
+      uploadedBy: 'Jonathon Harris'
+    },
+    {
+      documentName: 'Some Document',
+      uploadedBy: 'Jonathon Harris'
+    }
+  ];
 
   constructor() { }
 
