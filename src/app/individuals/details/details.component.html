@@ -1,0 +1,294 @@
+<div class="grid">
+    <div class="col-12">
+      <p-tabView>
+        <p-tabPanel header="Profile">
+          <div class="grid">
+            <div class="col-4">
+              <p-card>
+                <div class="grid">
+                  <div class="col-12">
+                    <h4>Profile</h4>
+                  </div>
+                  <div class="col-2 justify-content-center flex-wrap">
+                    <p-avatar label="DA" shape="circle"></p-avatar>
+                  </div>
+                  <div class="col-10">
+                    <div class="grid">
+                      <div class="col">
+                        <p><strong>Drew Atkison</strong></p>
+                      </div>
+                    </div>
+                    <div class="grid">
+                      <div class="col">
+                        <p>Male</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </p-card>
+            </div>
+
+            <div class="col-8 family-card">
+              <p-card>
+                <div class="grid">
+                  <div class="col-12">
+                    <h4>Family</h4>
+                  </div>
+                  <div class="col-6">
+                    <div class="grid">
+                      <div class="col-2 justify-content-center flex-wrap">
+                        <p-avatar label="DA" shape="circle"></p-avatar>
+                      </div>
+                      <div class="col-10">
+                        <div class="grid">
+                          <div class="col">
+                            <p><strong>Main</strong></p>
+                          </div>
+                        </div>
+                        <div class="grid">
+                          <div class="col">
+                            <p>Drew Atkison</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="grid">
+                      <div class="col-2 justify-content-center flex-wrap">
+                        <p-avatar label="DA" shape="circle"></p-avatar>
+                      </div>
+                      <div class="col-10">
+                        <div class="grid">
+                          <div class="col">
+                            <p><strong>Spouse</strong></p>
+                          </div>
+                        </div>
+                        <div class="grid">
+                          <div class="col">
+                            <p>Elizabeth Atkison</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </p-card>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="col-4">
+              <p-card>
+                <div class="grid">
+                  <div class="col-12">
+                    <h4>Dates</h4>
+                  </div>
+                  <div class="col-12">
+                    <div class="grid">
+                      <div class="col-6">
+                        <p><strong>Previous Attendance</strong></p>
+                      </div>
+                      <div class="col-6">
+                        02/23/1994
+                      </div>
+                    </div>
+                    <div class="grid">
+                      <div class="col-6">
+                        <p><strong>Created</strong></p>
+                      </div>
+                      <div class="col-6">
+                        02/23/1994
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </p-card>
+            </div>
+            <div class="col-8">
+              <p-card>
+                <div class="grid">
+                  <div class="col-12">
+                    <h4>Groups</h4>
+                  </div>
+                  <div class="col-12">
+                    <div class="grid">
+                      <div class="col-6">
+                        <p><strong>Previous Attendance</strong></p>
+                      </div>
+                      <div class="col-6">
+                        02/23/1994
+                      </div>
+                    </div>
+                    <div class="grid">
+                      <div class="col-6">
+                        <p><strong>Created</strong></p>
+                      </div>
+                      <div class="col-6">
+                        02/23/1994
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </p-card>
+            </div>
+            <div class="col-12">
+              <p-card>
+                <div class="grid">
+                  <div class="col-12">
+                    <h4>Notes</h4>
+                  </div>
+                  <div class="col-12">
+                    <ul class="list-none p-0 m-0">
+                      <li class="flex align-items-center py-3 px-2 border-bottom-1 surface-border flex-wrap">
+                        <div class="grid">
+                          <div class="col-12 pb-1 mb-1">
+                            <p><strong>Drew Atkison</strong></p>
+                          </div>
+                          <div class="col-12">
+                            <p class="accent-color">THis is some notes! So write here there everywhere</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="flex align-items-center py-3 px-2 border-bottom-1 surface-border flex-wrap">
+                        <div class="grid">
+                          <div class="col-12 pb-1 mb-1">
+                            <p><strong>Drew Atkison</strong></p>
+                          </div>
+                          <div class="col-12">
+                            <p class="accent-color">THis is some notes! So write here there everywhere</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="flex align-items-center py-3 px-2 border-bottom-1 surface-border flex-wrap">
+                        <div class="grid">
+                          <div class="col-12 pb-1 mb-1">
+                            <p><strong>Drew Atkison</strong></p>
+                          </div>
+                          <div class="col-12">
+                            <p class="accent-color">THis is some notes! So write here there everywhere</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </p-card>
+            </div>
+            <div class="col-12">
+              <p-card>
+                <div class="grid">
+                  <div class="col-12">
+                    <h4>Interactions</h4>
+                  </div>
+                  <div class="col-12">
+                    <p-table [value]="interactions" responsiveLayout="scroll">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th>Status</th>
+                                <th>Action</th>
+                                <th>Assign To</th>
+                                <th>Date</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-interaction>
+                            <tr>
+                                <td></td>
+                                <td>{{interaction.action}}</td>
+                                <td>{{interaction.assignTo}}</td>
+                                <td>{{interaction.date}}</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                  </div>
+                </div>
+              </p-card>
+            </div>
+            <div class="col-12">
+              <p-card>
+                <div class="grid">
+                  <div class="col-12">
+                    <h4>Documents</h4>
+                  </div>
+                  <div class="col-12">
+                    <p-table [value]="documents" responsiveLayout="scroll">
+                      <ng-template pTemplate="header">
+                          <tr>
+                              <th>Document Name</th>
+                              <th>Uploaded By</th>
+                          </tr>
+                      </ng-template>
+                      <ng-template pTemplate="body" let-document>
+                          <tr>
+                              <td>{{document.documentName}}</td>
+                              <td>{{document.uploadedBy}}</td>
+                          </tr>
+                      </ng-template>
+                  </p-table>
+                  </div>
+                </div>
+              </p-card>
+            </div>
+          </div>
+        </p-tabPanel>
+        <p-tabPanel header="Family">
+          <div class="grid">
+            <div class="col-12">
+                <p-card>
+                    <div class="grid align-items-center">
+                        <div class="col-1 family-headline">
+                            <p-avatar class="w-2" label="DA" shape="circle"></p-avatar>
+                        </div>
+                        <div class="col-8">
+                            <div class="gri">
+                                <div class="col-12 mb-0 pb-0">
+                                    <h4 class="mb-0 pb-0"><strong>Atkison Family</strong></h4>
+                                </div>
+                                <div class="col-12">
+                                    <p>Family of three</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+            <div class="col-12">
+                <p-card>
+                    <div class="grid">
+                        <div class="col-12">
+                            <h4>Individuals</h4>
+                          </div>
+                        <div class="col-12">
+                            <p-table [value]="familyMembers" responsiveLayout="scroll">
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Relationship</th>
+                                    </tr>
+                                </ng-template>
+                                <ng-template pTemplate="body" let-familyMember>
+                                    <tr>
+                                        <td>{{familyMember.firstName}}</td>
+                                        <td>{{familyMember.lastName}}</td>
+                                        <td>{{familyMember.relationship}}</td>
+                                    </tr>
+                                </ng-template>
+                            </p-table>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+          </div>
+        </p-tabPanel>
+        <p-tabPanel header="Timeline">
+          Timeline
+        </p-tabPanel>
+        <p-tabPanel header="Giving">
+          Giving
+        </p-tabPanel>
+        <p-tabPanel header="Account">
+          Account
+        </p-tabPanel>
+      </p-tabView>
+    </div>
+  </div>

@@ -9,16 +9,3 @@ button {
 .pi-ellipsis-v:hover {
     cursor: pointer;
 }
-
-:host ::ng-deep .p-tabview-panels {
-    background: transparent !important;
-}
-
-:host ::ng-deep .p-avatar {
-    width: 4rem !important;
-    height: 4rem !important;
-}
-
-:host ::ng-deep .family-card .p-card-content {
-    padding-bottom: unset !important;
-}
