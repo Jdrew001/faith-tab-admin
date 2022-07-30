@@ -22,6 +22,7 @@ import { CardModule } from 'primeng/card';
 import { TimelineModule } from 'primeng/timeline';
 import { DividerModule } from 'primeng/divider';
 import { SharedModule } from '../shared/shared.module';
+import { FieldsetModule } from 'primeng/fieldset';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { SharedModule } from '../shared/shared.module';
     AvatarModule,
     CardModule,
     TimelineModule,
-    DividerModule
+    DividerModule,
+    FieldsetModule
   ]
 })
 export class IndividualsModule { }

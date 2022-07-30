@@ -9,6 +9,8 @@ import { TimelineData, TimelineEvent } from '../models/timeline-events.model';
 })
 export class DetailsComponent implements OnInit {
 
+  givingDisplay: boolean = false;
+
   timelineData: TimelineData = {
     sections: [
       { sectionId: 0, sectionName: 'Today' },
@@ -73,9 +75,59 @@ export class DetailsComponent implements OnInit {
     { date: '07/30/2022', category: 'General', source: 'Input', details: 'Some notes bla bla bla', amount: '$200.00'}
   ];
 
+  categories = [
+    {
+      label: 'Tithe', value: 'TITHE'
+    },
+    {
+      label: 'General Offering', value: 'GENERAL_OFFERING'
+    },
+    {
+      label: 'Building Fund', value: 'BUILDING_FUND'
+    }
+  ];
+
+  givingItems = [
+    {
+      category: '',
+      date: '',
+      amount: '',
+      checkNumber: '',
+      notes: ''
+    },
+    {
+      category: '',
+      date: '',
+      amount: '',
+      checkNumber: '',
+      notes: ''
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addGivingItem() {
+    this.givingItems.push(
+      {
+        category: '',
+        date: '',
+        amount: '',
+        checkNumber: '',
+        notes: ''
+      }
+    );
+  }
+
+  showGivingDialog() {
+    console.log('hello??');
+    this.givingDisplay = true;
+  }
+
+  closeDialog() {
+    this.givingDisplay = false;
   }
 
 }

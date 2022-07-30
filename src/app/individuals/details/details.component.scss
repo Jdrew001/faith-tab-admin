@@ -15,3 +15,31 @@
 :host ::ng-deep .family-card .p-card-content {
     padding-bottom: unset !important;
 }
+
+input {
+    width: 100%
+}
+
+:host ::ng-deep .p-dropdown {
+    width: 100%;
+}
+
+:host ::ng-deep .p-calendar {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+}
+
+.more-container {
+    border: 1px solid #dee2e6;
+    color: #495057;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.more-container:hover {
+    background-color: #dee2e6;
+    cursor: pointer;
+}
