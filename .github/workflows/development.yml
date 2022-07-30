@@ -1,4 +1,4 @@
-name: Closer App Development Pipeline
+name: Faith Tabernacle Admin Development Pipeline
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
           node-version: 16.x
 
       - name: Install app dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build Files
         run: npm run build
