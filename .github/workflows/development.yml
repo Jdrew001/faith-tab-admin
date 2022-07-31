@@ -42,15 +42,17 @@ jobs:
         with:
           name: admin-app
           path: project
-      - name: copy file via ssh password
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.REMOVE_HOST }}
+      - name: Copy Artifact to Server
+        uses: garygrossgarten/github-action-scp@v0.5.3
+        with: 
+          local: project
+          remote: /www/wwwroot/admin
+          host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          source: "project/faith-tab-admin/*"
-          target: "/www/wwwroot/admin"
-          rm: true
+          rmRemote: true
+          concurrency: 2
+          recursive: true
 
 #Deploy both Android and Ios if previous steps are successful
   # deploy:
