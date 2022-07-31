@@ -43,7 +43,7 @@ jobs:
           name: admin-app
           path: project
       - name: Copy Artifact to Server
-        uses: garygrossgarten/github-action-scp@v0.5.3
+        uses: garygrossgarten/github-action-scp@release
         with: 
           local: project
           remote: /www/wwwroot/admin
@@ -53,6 +53,7 @@ jobs:
           rmRemote: true
           concurrency: 2
           recursive: true
+          atomicPut: true
 
 #Deploy both Android and Ios if previous steps are successful
   # deploy:
