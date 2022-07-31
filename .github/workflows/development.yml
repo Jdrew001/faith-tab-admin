@@ -45,7 +45,7 @@ jobs:
       - name: Copy Artifact to Server
         uses: garygrossgarten/github-action-scp@release
         with: 
-          local: project
+          local: project/faith-tab-admin
           remote: /www/wwwroot/admin
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.USERNAME }}
