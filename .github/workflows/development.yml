@@ -51,6 +51,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           rmRemote: true
+          concurrency: 2
+          verbose: true
 
 #Deploy both Android and Ios if previous steps are successful
   # deploy:
